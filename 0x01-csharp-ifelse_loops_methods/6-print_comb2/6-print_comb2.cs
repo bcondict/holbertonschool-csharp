@@ -6,20 +6,23 @@ namespace _6_print_comb2
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i <= 9; i++)
+            int i = 0;
+            int j = 0;
+            for (i = 0; i <= 8; i++)
             {
-                for (int j = 0; j <= 8 && j != i; j++)
+                while (j <= 9)
                 {
-                    if (i == 9 && j == 8)
+                    if (i == 8 && j == 9)
                     {
                         Console.WriteLine("89");
                     }
-                    else
+                    else if (i != j)
                     {
-                        Console.Write(j);
-                        Console.Write("{0}, ", i);
+                        Console.Write("{0}{1}, ", i, j);
                     }
+                    j++;
                 }
+                j = i + 1;
             }
         }
     }
