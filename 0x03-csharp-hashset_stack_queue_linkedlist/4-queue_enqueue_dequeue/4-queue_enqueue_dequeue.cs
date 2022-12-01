@@ -8,10 +8,7 @@ class MyQueue
         Console.WriteLine("Number of items: {0}", aQueue.Count);
 
         if (aQueue.Count == 0)
-        {
             Console.WriteLine("Queue is empty");
-            return aQueue;
-        }
         else
             Console.WriteLine("First item: {0}", aQueue.Peek());
 
