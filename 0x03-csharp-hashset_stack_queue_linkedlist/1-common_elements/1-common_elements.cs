@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 class Sorting
 {
-    public static List<int> GetSortedList(List<int> list)
+    public static List<int> GetSorted(List<int> list)
     {
         for (int i = 0; i < list.Count; i++)
         {
@@ -37,6 +37,6 @@ class List
             if (list2.Contains(list1[i]) && new_list.Contains(list1[i]) == false)
                 new_list.Add(list1[i]);
         }
-        return Sorting.GetSortedList(new_list);
+        return Sorting.GetSorted(new_list);
     }
 }
