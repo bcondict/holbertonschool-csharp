@@ -13,18 +13,15 @@ class MyStack
 
         Console.WriteLine("Stack contains {0}: {1}", search, aStack.Contains(search));
 
-        Stack<string> copy = new Stack<string>(aStack);
+        List<string> items = new List<string>(aStack);
 
         if (aStack.Contains(search))
         {
-            foreach (var item in copy)
+            for (int i = 0; i < items.Count; i++)
             {
                 aStack.Pop();
-                if (item == search)
-                {
-                    aStack.Pop();
+                if (items[i] == search)
                     break;
-                } 
             }
         }
         aStack.Push(newItem);
