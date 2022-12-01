@@ -11,7 +11,7 @@ class MyStack
         else
             Console.WriteLine("Top item: " + aStack.Peek());
 
-        Console.WriteLine("Stack contains {0}: {1}", search, aStack.Contains(search));
+        Console.WriteLine("Stack contains \"{0}\"": {1}", search, aStack.Contains(search));
 
         List<string> items = new List<string>(aStack);
 
