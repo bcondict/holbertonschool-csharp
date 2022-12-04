@@ -1,8 +1,12 @@
 # 0x00. C# - Hello, World
 
 Here you'll found my first steps about C# and .NET with different kind of task.
+You can see al the task to complete with it's recpect solution on the task with the name acording to the number, ofcourse this is not the only solution but it's the way I figured out how to solve it. 
+
+My challenge for you is to try to solve all of this and after see the way I did it.
 
 All of this code was made on .NET version 2.1, asked for Holberton School.
+
 
 #### 0. Initialize new project
 Write a Bash script that initializes a new C# project inside a folder titled 0-new_project.
