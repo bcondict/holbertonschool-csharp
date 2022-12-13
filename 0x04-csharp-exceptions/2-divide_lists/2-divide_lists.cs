@@ -27,11 +27,11 @@ class List
                     Console.WriteLine("Cannot divide by zero");
                     result.Add(0);
                 }
+                catch(ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("Out of range");
+                }
             }
-        }
-        catch(ArgumentOutOfRangeException)
-        {
-            Console.WriteLine("Out of range");
         }
         return result;
     }
