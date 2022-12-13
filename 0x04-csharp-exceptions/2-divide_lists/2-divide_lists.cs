@@ -13,7 +13,7 @@ class List
             {
                 try
                 {
-                    if (list1[i] % list2[i])
+                    if (list1[i] % list2[i] != 0)
                     {
                         result.Add(0);
                     }
