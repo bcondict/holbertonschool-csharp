@@ -10,7 +10,7 @@ namespace Enemies
     {
         /// <sumary>health field of Zombie </sumary>  
         private int health;
-        private string name = (No name);
+        private string name = "(No name)";
 
         /// <sumary>Constructor to <see cref="Zombie"/> class.</sumary> 
         public Zombie()
@@ -30,10 +30,10 @@ namespace Enemies
         }
 
         /// <sumary> Constuctor with get and set property to <see cref="Zombie"/> class.</sumary>
-        public Name()
+        public string Name
         {
-            set { name = value };
-            get { return name };
+            get { return name; }
+            set { name = value; }
         }
 
         /// <sumary>Get health of <see cref="Zombie"/>.</sumary>
