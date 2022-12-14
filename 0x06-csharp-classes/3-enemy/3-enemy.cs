@@ -28,7 +28,7 @@ namespace Enemies
             throw new ArgumentException("Health must be greater than or equal to 0");
         }
 
-        /// <sumary>Get health of <see cref"Zombie"/>.<sumary>
+        /// <sumary>Get health of <see cref"Zombie"/>.</sumary>
         /// <returns>Health of <see cref"Zombie"/>.</returns>
         public int GetHealth()
         {
