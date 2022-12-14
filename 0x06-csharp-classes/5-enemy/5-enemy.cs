@@ -43,6 +43,7 @@ namespace Enemies
             return health;
         }
 
+        /// <sumary> format to print in stdou <see cref="Zombie"/> object.</sumary>
         public override string ToString() => $"Zombie Name: {name} / Total Health: {health}";
     }
 }
