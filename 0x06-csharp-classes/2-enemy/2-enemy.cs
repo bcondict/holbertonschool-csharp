@@ -25,7 +25,7 @@ namespace Enemies
                 health = value;
                 return;
             }
-            thow new ArgumentException("Health must be greater than or equal to 0");
+            throw new ArgumentException("Health must be greater than or equal to 0");
         }
     }
 }
