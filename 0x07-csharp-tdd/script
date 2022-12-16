@@ -1,0 +1,18 @@
+name="$1";
+dir="$2"
+mkdir "$dir";
+cd "$dir";
+dotnet new sln;
+mkdir "$name";
+cd "$name";
+dotnet new classlib;
+mv Class1.cs "$name.cs";
+cd ..;
+dotnet sln add "$name"/"$name.csproj";
+mkdir "$name.Tests";
+cd "$name.Tests";
+dotnet new nunit;
+mv UnitTest1.cs "$name.Tests.cs";
+dotnet add reference "../$name/$name.csproj";
+cd ..;
+dotnet sln add "$name.Tests/$name.Tests.csproj";
