@@ -24,3 +24,75 @@ All of this code was me on .NET version 2.1, asked for Holberton School.
 Write a method that returns True if the object is an int, otherwise return False.
 - Class: `Obj`
 - Prototype: `public static bool IsOfTypeInt(object obj)`
+
+#### 1. For instance
+Write a method that returns True if the object is an instance of, or if the object is an instance of a class that inherited from, Array, otherwise return False.
+- Class: `Obj`
+- Prototype: `public static bool IsInstanceOfArray(object obj)`
+
+#### 2. Only subclass
+Write a method that prints the names of the available properties and methods of an object. See example for output format.
+- Class: `Obj`
+- Prototype: `public static void Print(object myObj)`
+
+#### 3. Type
+Write a method that prints the names of the available properties and methods of an object. See example for output format.
+- Class: `Obj`
+- Prototype: `public static void Print(object myObj)`
+
+#### 4. It's not a lesson in classes and inheritance without a Dog
+Write a empty class Dog that inherits from empty class Animal.
+- Base Class: `Animal`
+- Derived Class: `Dog`
+
+#### 5. Basic shapes
+Write a class Shape.
+- class: `Shape`
+    * public method: `public virtual int Area()`
+        - Throws an `NotImplementedException` with the message `Area() is not implemented`
+
+#### 6. Rectangle
+Based on `5-shape`, write a class Rectangle that inherits from Shape.
+- Class: `Rectangle`
+    * private field: `private int width`
+    * private field: `private int height`
+    * public property: `public int Width`
+        - `get`: retrieve `width`
+        - `set`: if Value is negative, throw an `ArgumentException` with the message `Width must be greater than or equal to 0`. Otherwise, set `width` to the value.
+    * public property: `public int Height`
+        - `get`: retrieve `height`
+        - `set`: if value is negative, throw an `ArgumentException` with the message `Height must be greater than or equal to 0`. Otherwise, set `Height` to the value.
+
+#### 7. Full rectangle
+Based on `6-shape`, write a class Rectangle that inherits from Shape.
+- Class: `Rectangle`
+    * private field: `private int width`
+    * private field: `private int height`
+    * public property: `public int Width`
+        - `get`: retrieve `width`
+        - `set`: if Value is negative, throw an `ArgumentException` with the message `Width must be greater than or equal to 0`. Otherwise, set `width` to the value.
+    * public property: `public int Height`
+        - `get`: retrieve `height`
+        - `set`: if value is negative, throw an `ArgumentException` with the message `Height must be greater than or equal to 0`. Otherwise, set `Height` to the value.
+    * public method: `public new int Area()`
+        - This will override the Area() method defined in the `Shape` base class. (Try changing `new` to `override` and run the program. What happens?) returns the area of the rectangle
+    * public method: `public override string ToString()`
+        - returns `[Rectangle] <width> / <height>`
+
+#### 8. Square #1
+Based on `7-shape`, write a class Square that inherits from Rectangle
+- Class: `Square`
+    * private field: `private int size`
+    * public property: `public int Size`
+        - `get`: retrieve `size`
+        - `set`: if value is negative, throw an `ArguementException` with the message `Size must be greater than or equal to 0`. Otherwise, set `size`, `height`, and `width` to the value.
+
+#### 9. Square #2
+Based on `8-shape`, write a class `Square` that inherits from `Rectangle`
+- Class: `Square`
+    * private field: `private int size`
+    * public property: `public int size`
+        - `get`: retrieve `size`
+        - `set`: if value is negative, throw an `ArgumentException` with the message `Size must be greater than or equal to 0`. Otherwise, set `size`, `Height`, and `Width` to the value.
+    * `Area()` should work **without** writing a new `Area()` method within your `Square` class
+    * `.ToString()` should return `[Square] <size> / <size>`
