@@ -7,7 +7,7 @@ class Obj
     /// <return> true if <paramref name="obj"/> is int </return>
     public static bool IsOfTypeInt(object obj)
     {
-        if (obj in int)
+        if (obj is int)
             return true;
         return false;
     }
