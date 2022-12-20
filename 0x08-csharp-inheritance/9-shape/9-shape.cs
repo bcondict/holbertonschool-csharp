@@ -33,12 +33,12 @@ class Rectangle : Shape
         }
     }
 
-    public override int Area()
+    public new int Area()
     {
         return(height * width);
     }
 
-    public new string ToString()
+    public override string ToString()
     {
         return ($"[Rectangle] {width} / {height}");
     }
@@ -59,7 +59,7 @@ class Square : Rectangle
         }
     }
 
-    public new string ToString()
+    public override string ToString()
     {
         return ($"[Squre] {size} / {size}");
     }
