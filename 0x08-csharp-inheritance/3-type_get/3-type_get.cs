@@ -12,7 +12,7 @@ class Obj
             Console.WriteLine(property.Name);
         }
 
-        Console.WriteLine(myObj.GetType().Name + "Methods:");
+        Console.WriteLine(myObj.GetType().Name + " Methods:");
         foreach (var method in myObj.GetType().GetMethods())
         {
             Console.WriteLine(method.Name);
