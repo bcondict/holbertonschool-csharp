@@ -16,7 +16,6 @@ class Rectangle : Shape
     public int Width
     {
         get { return width; }
-        // set { width = value > 0 ? value : throw new ArgumentException ("Width must be greater than or equal to 0"); }
         set {
             if (value < 0)
                 throw new ArgumentException ("Width must be greater than or equal to 0");
@@ -27,7 +26,6 @@ class Rectangle : Shape
     public int Height
     {
         get { return height; }
-        // set { height = value > 0 ? value : throw new ArgumentException ("Heigth must be greater than or equal to 0"); }
         set {
             if (value < 0)
                 throw new ArgumentException ("Height must be greater than or equal to 0");
