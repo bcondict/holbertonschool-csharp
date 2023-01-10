@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class VectorMath
 {
@@ -9,6 +10,8 @@ class VectorMath
 
         double x_vect2 = vector2[0];
         double y_vect2 = vector2[1];
+
+        double[] fail = new double[] {-1}; 
 
         double[] new_vect = new double[] {x_vect1 + x_vect2, y_vect1 + y_vect2};
 
@@ -22,11 +25,11 @@ class VectorMath
             double z_vect1 = vector1[0];
             double z_vect2 = vector2[1];
 
-            new_vect = new_vect.Concat(new double[] {z_vect1 + z_vect2});
+            new_vect[3] += z_vect1 + z_vect2;
 
             return (new_vect);
         }
 
-        return -1;
+        return (fail);
     }
 }
