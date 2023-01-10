@@ -96,3 +96,11 @@ Based on `8-shape`, write a class `Square` that inherits from `Rectangle`
         - `set`: if value is negative, throw an `ArgumentException` with the message `Size must be greater than or equal to 0`. Otherwise, set `size`, `Height`, and `Width` to the value.
     * `Area()` should work **without** writing a new `Area()` method within your `Square` class
     * `.ToString()` should return `[Square] <size> / <size>`
+
+#### 10. Liskov
+Write a blog post that explains the problem with implementing a Square class as a derived class of Rectangle. It should cover:
+- what Liskov’s substitution principle is
+- why Square inheriting from Rectangle is not an ideal design choice
+- ways that this class hierarchy could be improved
+Your posts should have examples and at least one picture, at the top. Publish your blog post on Medium or LinkedIn, and share it at least on Twitter and LinkedIn.
+Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
