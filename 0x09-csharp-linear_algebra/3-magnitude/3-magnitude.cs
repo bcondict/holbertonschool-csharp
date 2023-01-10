@@ -20,6 +20,6 @@ class VectorMath
             return (Math.Sqrt(a + b + c));
         }
 
-        return -1;
+        return (-1);
     }
 }
