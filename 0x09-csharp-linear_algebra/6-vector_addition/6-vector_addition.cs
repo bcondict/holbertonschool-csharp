@@ -1,31 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// class that cointain diferent method to handle vectors
+/// </summary>
 class VectorMath
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="vector1"></param>
+    /// <param name="vector2"></param>
+    /// <returns></returns>
     public static double[] Add(double[] vector1, double[] vector2)
     {
-        double x_vect1 = vector1[0];
-        double y_vect1 = vector1[1];
-
-        double x_vect2 = vector2[0];
-        double y_vect2 = vector2[1];
-
         double[] fail = new double[] {-1}; 
+        if (vector1.Length != vector2.Length)
+            return fail;
 
-        double[] new_vect = new double[] {x_vect1 + x_vect2, y_vect1 + y_vect2};
 
-        if (vector1.Length == 2 && vector2.Length == 2)
+        if (vector1.Length == 2 || vector1.Length == 3)
         {
-            return (new_vect);
-        }
+            double[] new_vect = new double[vector1.Length];
 
-        if (vector1.Length == 3 && vector2.Length == 3)
-        {
-            double z_vect1 = vector1[0];
-            double z_vect2 = vector2[1];
-
-            new_vect[3] += z_vect1 + z_vect2;
+            for (int i = 0; i < vector1.Length; i++)
+            {
+                new_vect[i] = vector1[i] + vector2[i];
+            }
 
             return (new_vect);
         }
