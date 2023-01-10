@@ -1,8 +1,16 @@
 ﻿using System;
 using Math;
 
+/// <summary>
+/// class that cointain diferent method to handle vectors
+/// </summary>
 class VectorMath
 {
+    /// <summary>
+    /// calculates and returns the lenght of a given vector
+    /// </summary>
+    /// <param name="vector"></param>
+    /// <returns>Magnitud of a given vector</returns>
     public static double Magnitude(double[] vector)
     {
         double a = Math.Pow(vector[0], 2);
