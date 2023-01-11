@@ -12,6 +12,9 @@ class VectorMath
     /// <returns>Magnitud of a given vector</returns>
     public static double Magnitude(double[] vector)
     {
+        if (vector.Length > 3 || vector.Length < 2)
+            return -1;
+
         double a = Math.Pow(vector[0], 2);
         double b = Math.Pow(vector[1], 2);
 
