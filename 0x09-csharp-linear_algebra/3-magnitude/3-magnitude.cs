@@ -5,6 +5,7 @@
 /// </summary>
 class VectorMath
 {
+    /// <summary>
     /// calculates and returns the lenght of a given vector
     /// </summary>
     /// <param name="vector"></param>
