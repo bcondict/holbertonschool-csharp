@@ -21,7 +21,7 @@ class VectorMath
 
         if (vector.Length == 3)
         {
-            double c = Math.Pow(vector[3], 2);
+            double c = Math.Pow(vector[2], 2);
 
             return (Math.Round(Math.Sqrt(a + b + c), 2));
         }
