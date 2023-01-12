@@ -10,7 +10,7 @@ class MatrixMath
         if (matrix1.GetLength(1) != matrix2.GetLength(0))
             return fail;
 
-        double[,] result_matrix = new double[matrix1.GetLength(0), matrix1.GetLength(1)];
+        double[,] result_matrix = new double[matrix1.GetLength(0), matrix2.GetLength(1)];
         int row = 0, col = 0;
         double value = 0;
         for (row = 0; row < result_matrix.GetLength(0); row++)
