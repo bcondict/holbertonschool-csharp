@@ -4,7 +4,7 @@ class MatrixMath
 {
     public static double[,] Transpose(double[,] matrix)
     {
-        double[,] result_matrix = new double[matrix.GetLength(0), matrix.GetLength(1)];
+        double[,] result_matrix = new double[matrix.GetLength(1), matrix.GetLength(0)];
         if (matrix.GetLength(0) == 0)
             return result_matrix;
 
