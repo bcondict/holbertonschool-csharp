@@ -5,8 +5,6 @@ class MatrixMath
     public static double[,] Transpose(double[,] matrix)
     {
         double[,] result_matrix = new double[matrix.GetLength(1), matrix.GetLength(0)];
-        if (matrix.GetLength(0) == 0)
-            return result_matrix;
 
         for (int row = 0; row < matrix.GetLength(0); row++)
         {
