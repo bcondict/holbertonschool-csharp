@@ -11,6 +11,7 @@ class MatrixMath
         if (matrix1.GetLength(0) != matrix2.GetLength(0) || (matrix1.GetLength(1) != matrix2.GetLength(1)))
             return fail;
 
+        // to check if matrix has a valid size 
         if ((matrix1.GetLength(0) > 3 || matrix1.GetLength(0) < 2) || (matrix1.GetLength(1) > 3 || matrix1.GetLength(1) < 2))
             return fail;
 
