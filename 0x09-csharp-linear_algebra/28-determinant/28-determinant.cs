@@ -19,7 +19,7 @@ class MatrixMath
         if (matrix.GetLength(0) == 2)
         {
             determinatn_val = matrix[0, 0] * matrix[1, 1] - matrix[1, 0] * matrix[0, 1];
-            return Math.Round(determinatn_val); 
+            return Math.Round(determinatn_val, 2); 
         }
 
         if (matrix.GetLength(0) == 3)
@@ -35,6 +35,6 @@ class MatrixMath
             determinatn_val = first_val - second_val + third_val;
         }
 
-        return Math.Round(determinatn_val); 
+        return Math.Round(determinatn_val, 2); 
     }
 }
