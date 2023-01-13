@@ -24,7 +24,7 @@ class MatrixMath
         for (int i = 0; i < result_matrix.GetLength(0); i++)
         {
             for (int j = 0; j < result_matrix.GetLength(1); j++)
-                result_matrix[i, j] = transpose_val[i, j] / determinant_val;
+                result_matrix[i, j] = Math.Round(transpose_val[i, j] / determinant_val, 2);
         }
 
         return result_matrix;
