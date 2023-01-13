@@ -12,7 +12,7 @@ class MatrixMath
             return fail;
 
         // to check if matrix has a valid size 2d
-        if (matrix.GetLength(0) < 2)
+        if (matrix.GetLength(0) != 2)
             return fail;
 
         double determinant_val = matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
