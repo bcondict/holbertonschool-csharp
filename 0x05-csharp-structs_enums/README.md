@@ -14,7 +14,10 @@ My challenge for you is to try to solve all of this task and after see the way I
 
 There are some task that may need a main file, all the main file would be in main directory. Make sure to move them to the appropriate folder for proper functioning, it must be at the same directory of the task to work properly.
 
-To run a specific task use dotnet run inside of the task directory.
+
+To see my solution you need to build the project, to do that you need to run `dotnet build` inside of the task directory.
+
+To run a specific task use `dotnet run` inside of the task directory.
 
 All of this code was me on .NET version 2.1, asked for Holberton School.
 

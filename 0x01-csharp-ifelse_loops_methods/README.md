@@ -9,6 +9,9 @@ All the main code would be in `main` directory, it must be at same directory of 
 
 all of this code was made on .NET version 2.1, asked for Holberton School.
 
+To see my solution you need to build the project, to do that you need to run `dotnet build` inside of the task directory.
+
+To run a specific task run `dotnet run` inside of the task directory.
 
 #### 0. Positive anything is better than negative nothing
 This program will assign a random signed number to the variable `number` each time it is executed. Complete the [source code](https://github.com/holbertonschool/0x01.cs/blob/master/0-positive_or_negative.cs) in order to print whether the number stored in the variable `number` is positive or negative.
