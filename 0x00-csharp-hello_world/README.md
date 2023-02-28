@@ -101,8 +101,8 @@ Complete this [source code](https://github.com/holbertonschool/0x00.cs/blob/mast
 
 
 #### 11.Create a new sentence
-Comlete this [source code](https://github.com/) to print `object-oriented programming in C#` folloed by a new line.
-- Your cide should be exactly 11 lines long
+Comlete this [source code](https://github.com/hs-hq/0x00.cs/blob/main/11-concat_edges.cs) to print `object-oriented programming in C#` folloed by a new line.
+- Your code should be exactly 11 lines long
 - You are no allowed to use any loops or conditional statements
 - You are no alloed to create new variables
 - You are not alloerd to use string literals
