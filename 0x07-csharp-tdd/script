@@ -1,5 +1,10 @@
+# name of namespace to create
 name="$1";
+
+# name of directory to create
 dir="$2"
+
+
 mkdir "$dir";
 cd "$dir";
 dotnet new sln;
