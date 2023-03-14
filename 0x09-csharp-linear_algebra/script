@@ -1,5 +1,0 @@
-# imput first argument name of directory
-dir="$1";
-dotnet new console -o "$dir";
-cd "$dir";
-mv Program.cs "$dir.cs"
