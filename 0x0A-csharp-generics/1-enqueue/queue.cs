@@ -6,15 +6,15 @@ public class Queue<T>
 {
     public Node head = null;
     public Node tail = null;
-    public int count = 0;
+    public int count;
 
     /// <summary>
     /// Check the type of the Queue
     /// </summary>
     /// <returns>Return the Queue's type</returns>
-    public string CheckType()
+    public Type CheckType()
     {
-        return typeof(T).ToString();
+        return typeof(T);
     }
 
     /// <summary>
@@ -42,12 +42,14 @@ public class Queue<T>
     public void Enqueue(T value)
     {
         Node newNode = new Node(value);
+
         if (head == null)
         {
             head = newNode;
             tail = newNode;
             head.next = null;
         }
+
         else
         {
             tail.next = newNode;
