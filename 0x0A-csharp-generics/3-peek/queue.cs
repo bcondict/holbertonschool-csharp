@@ -4,9 +4,18 @@
 /// <typeparam name="T"> Generic type </typeparam>
 public class Queue<T>
 {
+    /// <summary>
+    /// node head of the Queue
+    /// </summary>
     public Node head = null;
+
+    /// <summary>
+    /// node tail of the Queue
+    /// </summary>
     public Node tail = null;
-    public int count = 0;
+
+    // Number of nodes in the Queue
+    private int count = 0;
 
     /// <summary>
     /// Check the type of the Queue
@@ -22,7 +31,15 @@ public class Queue<T>
     /// </summary>
     public class Node
     {
+        /// <summary>
+        /// Value is the value stored in the node
+        /// </summary>
+        /// <returns>default value null</returns>
         public T value = default(T);
+
+        /// <summary>
+        /// Next node in the Queue
+        /// </summary>
         public Node next = null;
 
         /// <summary>
