@@ -102,3 +102,23 @@ This project is about linear algebra (You can find a better description inside t
 - What is a slice.
 - How to slice a vector/matrix.
 - What are element-wise operations.
+
+#### 0x0A-csharp-generics
+This project is about generics (You can find a better description inside the project). Some of the topics are:
+- What are generics and what are their purpose
+- What common generic classes and interfaces are provided in the .NET class library
+- When and how to create generic classes
+- When and how to create generic methods
+- How access modifiers affect a class and its members
+- What is the default(T) expression used for
+- What is covariance and contravariance
+
+#### 0x0B-csharp-interfaces
+This project is about interfaces (You can find a better description inside the project). Some of the topics are:
+- What is an interface
+- What are interfaces used for
+- How do interfaces, classes, and structs differ
+- What is an abstract class
+- How are interfaces different from abstract classes
+- How is an interface implemented explicitly
+- What is the as keyword and how to use it
