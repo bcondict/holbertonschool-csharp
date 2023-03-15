@@ -25,6 +25,9 @@ public abstract class Base
 /// </summary>
 interface IInteractive
 {
+    /// <summary>
+    /// Used for interactions.
+    /// </summary>
     void Interact();
 }
 
@@ -33,7 +36,15 @@ interface IInteractive
 /// </summary>
 interface IBreakable
 {
+    /// <summary>
+    /// Used for item durability.
+    /// </summary>
+    /// <value>Getter and setter</value>
     int durability { get; set; }
+
+    /// <summary>
+    /// Used to break an item.
+    /// </summary>
     void Break();
 }
 
@@ -42,7 +53,15 @@ interface IBreakable
 /// </summary>
 interface ICollectable
 {
+    /// <summary>
+    /// Used to check if collected or not.
+    /// </summary>
+    /// <value>Getter and setter</value>
     bool isCollected { get; set; }
+
+    /// <summary>
+    /// Used to collect something.
+    /// </summary>
     void Collect();
 }
 
