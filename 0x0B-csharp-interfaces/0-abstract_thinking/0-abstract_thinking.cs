@@ -5,6 +5,9 @@ using System;
 /// </summary>
 public abstract class Base
 {
+    /// <summary>
+    /// name of the object, default is null
+    /// </summary>
     public string name;
 
     /// <summary>
