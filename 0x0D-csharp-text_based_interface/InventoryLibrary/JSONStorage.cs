@@ -1,40 +1,47 @@
-using System.Text.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.Json;
 
-namespace InventoryLibrary;
-public class JSONStorage
+namespace InventoryLibrary
 {
-    Dictionary<string, dynamic> objects = new Dictionary<string, dynamic>();
-
-    public static dynamic All()
+    public class JSONStorage
     {
-        return objects;
-    }
+        public Dictionary<string, object> objects = new Dictionary<string, object>();
 
-    public static void New(dynamic obj)
-    {
-        try
+        public Dictionary<string, object> All()
         {
-            objects.Add($"obj.GetType().Name.{obj.id}", obj);
+            return objects;
         }
-        catch (System.ArgumentException)
+
+        public void New(BaseClass obj)
         {
-            Console.WriteLine("An element with Key = \"obj.GetType().Name.{obj.id}\" already exists.");
+            try
+            {
+                objects.Add($"{obj.GetType().Name}.{obj.id}", obj);
+            }
+            catch (System.Exception)
+            {
+                Console.WriteLine("An element with Key = {0} already exists.", $"{obj.GetType().Name}.{obj.id}");
+            }
         }
-    }
 
-    public static void Save()
-    {
-        string path = "../../../../storage/inventory_manager.json";
-        string json = JsonConvert.SerializeObject(objects, Formatting.Indented);
-        File.WriteAllText(path, json);
-    }
-
-    public static void Load()
-    {
-        string path = "../../../../storage/inventory_manager.json";
-        string json = File.ReadAllText(path);
-        objects = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
+        public void Save()
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+            string path = "../../storage/inventory.json";
+            // string json = JsonSerializer.Serialize(objects, Formatting.Indented);
+            string json = JsonSerializer.Serialize(objects, options);
+            File.WriteAllText(path, json);
+        }
+        public void Load()
+        {
+            string path = "../../storage/inventory.json";
+            string json = File.ReadAllText(path);
+            objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+        }
     }
 }

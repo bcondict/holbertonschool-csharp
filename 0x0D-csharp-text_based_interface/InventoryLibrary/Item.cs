@@ -1,22 +1,26 @@
-namespace InventoryLibrary;
+using System;
+using System.Collections.Generic;
 
-public class Item : BaseClass
+namespace InventoryLibrary
 {
-    public string name;
-
-    public Item(
-        string name,
-        string description = "",
-        float price = 0.0f,
-        List<string> tags = null
-    )
+    public class Item : BaseClass
     {
-        this.name = name;
-        this.description = description;
-        this.price = Math.Round(price, 2);
-        this.tags = tags;
+        public string name;
+        public string description;
+        public float price;
+        public List<string> tags;
+
+        public Item(
+            string name,
+            string description = "",
+            float price = 0.0f,
+            List<string> tags = null
+        )
+        {
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.tags = tags;
+        }
     }
-
-    BaseClass baseClass = new BaseClass();
-
 }
