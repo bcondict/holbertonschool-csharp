@@ -1,7 +1,14 @@
-namespace InventoryManager;
+﻿using System;
+using InventoryLibrary;
 
-public class InventoryManager
+namespace InventoryManager
 {
-    JSONStorage jsonStorage = new JSONStorage();
-    jsonStorage.Load();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            JSONStorage jsonStorage = new JSONStorage();
+            jsonStorage.Load();
+        }
+    }
 }

@@ -1,15 +1,21 @@
-namespace InventoryLibrary;
+﻿using System;
+using InventoryLibrary;
+using System.Collections.Generic;
+using System.Linq;
 
-public class BaseClass
+namespace InventoryLibrary
 {
-    public string id;
-    public DateTime date_created;
-    public DateTime date_updated;
-
-    public BaseClass()
+    public class BaseClass
     {
-        id = Guid.NewGuid().ToString();
-        date_created = DateTime.Now;
-        date_updated = DateTime.Now;
+        public string id;
+        public DateTime date_created;
+        public DateTime date_updated;
+
+        public BaseClass()
+        {
+            id = Guid.NewGuid().ToString();
+            date_created = DateTime.Now;
+            date_updated = DateTime.Now;
+        }
     }
 }
