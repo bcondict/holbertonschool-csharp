@@ -7,15 +7,15 @@ namespace InventoryLibrary
 {
     public class BaseClass
     {
-        public string id;
-        public DateTime date_created;
-        public DateTime date_updated;
+        public string id { get; set; }
+        public DateTime date_created { get; set; }
+        public DateTime date_updated { get; set; }
 
         public BaseClass()
         {
-            id = Guid.NewGuid().ToString();
-            date_created = DateTime.Now;
-            date_updated = DateTime.Now;
+            this.id = Guid.NewGuid().ToString();
+            this.date_created = DateTime.Now;
+            this.date_updated = DateTime.Now;
         }
     }
 }

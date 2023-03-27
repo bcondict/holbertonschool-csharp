@@ -32,16 +32,38 @@ namespace InventoryLibrary
             {
                 WriteIndented = true,
             };
-            string path = "../../storage/inventory.json";
-            // string json = JsonSerializer.Serialize(objects, Formatting.Indented);
+            string path = "../storage/inventory_manager.json";
             string json = JsonSerializer.Serialize(objects, options);
             File.WriteAllText(path, json);
         }
+
         public void Load()
         {
-            string path = "../../storage/inventory.json";
+            string path = "../storage/inventory_manager.json";
             string json = File.ReadAllText(path);
-            objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+            if (json == null || json == "")
+                return;
+
+            // objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+            JsonDocument doc = JsonDocument.Parse(json);
+
+            // generate by IA, incredible
+            foreach (JsonProperty property in doc.RootElement.EnumerateObject())
+            {
+                string key = property.Name;
+                JsonElement value = property.Value;
+
+                // extract the type name from the key
+                int index = key.IndexOf(".");
+                string typeName = key.Substring(0, index);
+
+                // get the type of the object based on the type name
+                Type type = Type.GetType($"InventoryLibrary.{typeName}");
+
+                // deserialize the object using the appropriate type
+                object obj = JsonSerializer.Deserialize(value.GetRawText(), type);
+                objects[key] = obj;
+            }
         }
     }
 }
