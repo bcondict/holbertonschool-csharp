@@ -1,8 +1,14 @@
 using System;
 using InventoryLibrary;
 
+/// <summary>
+/// class prompt to print the prompt
+/// </summary>
 public static class Prompt
 {
+    /// <summary>
+    /// print the prompt to the user
+    /// </summary>
     public static void Print()
     {
         Console.WriteLine();

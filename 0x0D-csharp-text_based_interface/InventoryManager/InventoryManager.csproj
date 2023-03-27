@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InventoryLibrary\InventoryLibrary.csproj" />
+    <!-- <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile> -->
   </ItemGroup>
 
   <PropertyGroup>

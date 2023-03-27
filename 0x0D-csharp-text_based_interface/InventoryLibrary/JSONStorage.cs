@@ -5,15 +5,30 @@ using System.Text.Json;
 
 namespace InventoryLibrary
 {
+    /// <summary>
+    /// class to save the objects in a json file
+    /// </summary>
     public class JSONStorage
     {
+        /// <summary>
+        /// Dictionary to save the objects created in a json file
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<string, object> objects = new Dictionary<string, object>();
 
+        /// <summary>
+        /// all method to return the dictionary
+        /// </summary>
+        /// <returns>dictorionary of objects</returns>
         public Dictionary<string, object> All()
         {
             return objects;
         }
 
+        /// <summary>
+        /// create new object and add to the dictionary
+        /// </summary>
+        /// <param name="obj">object create and save</param>
         public void New(BaseClass obj)
         {
             try
@@ -26,6 +41,9 @@ namespace InventoryLibrary
             }
         }
 
+        /// <summary>
+        /// save the dictionary in a json file
+        /// </summary>
         public void Save()
         {
             var options = new JsonSerializerOptions
@@ -37,6 +55,9 @@ namespace InventoryLibrary
             File.WriteAllText(path, json);
         }
 
+        /// <summary>
+        /// load the dictionary from a json file
+        /// </summary>
         public void Load()
         {
             string path = "../storage/inventory_manager.json";
