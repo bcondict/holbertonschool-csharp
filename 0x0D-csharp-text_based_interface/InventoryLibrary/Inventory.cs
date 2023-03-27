@@ -12,8 +12,8 @@ namespace InventoryLibrary
         {
             this.user_id = user_id;
             this.item_id = item_id;
-            if (quantity < 0)
-                throw new ArgumentException("Quantity must be greater than or equal to 0");
+            if (quantity < 1)
+                quantity = 1;
             this.quantity = quantity;
         }
     }
