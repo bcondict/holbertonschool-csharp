@@ -122,3 +122,6 @@ This project is about interfaces (You can find a better description inside the p
 - How are interfaces different from abstract classes
 - How is an interface implemented explicitly
 - What is the as keyword and how to use it
+
+# Author
+Jesus Junco - [portfolio](bcondict.vercel.app)
